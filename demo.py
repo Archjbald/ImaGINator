@@ -87,7 +87,7 @@ if __name__ == '__main__':
 	parser = argparse.ArgumentParser('imaginator demo config')
 
 	parser.add_argument('--dataset', type=str, default='mug')
-	parser.add_argument('--data_path', type=str, default='')
+	parser.add_argument('--data_path', type=str, default='data/mug')
 	parser.add_argument('--img_size', type=int, default=64)
 	parser.add_argument('--batch_size', type=int, default=10)
 	parser.add_argument('--num_workers', type=int, default=8)
