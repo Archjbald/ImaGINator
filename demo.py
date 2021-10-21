@@ -17,7 +17,7 @@ def save_videos(path, vids, n, cat):
 
 	for i in range(n):
 		v = (vids[i].permute(0, 2, 3, 1) * 255).to(torch.uint8)
-		torchvision.io.write_video(os.path.join(path, "%d_%d.mp4" % (i, cat)), v, fps=24.0)
+		torchvision.io.write_video(os.path.join(path, "%d_%d.mp4" % (i, cat)), v.cpu(), fps=24.0)
 		#skvideo.io.vwrite(os.path.join(path, "%d_%d.mp4" % (i, cat)), v, outputdict={"-vcodec": "libx264"})
 
 	return
